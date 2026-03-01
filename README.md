@@ -1,6 +1,3 @@
-# Java-Projects
-
-
 # GUI PASSWORD GENERATOR
 
 
