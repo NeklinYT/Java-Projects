@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -11,6 +13,8 @@ public class GPanel extends JFrame {
     private JCheckBox useSymbolsCheckBox;
     private JCheckBox useSpecialSymbolsCheckBox;
     private JLabel resultLabel;
+    private JButton copyButton;
+
 
     public GPanel() {
         setTitle("Password generator");
@@ -46,6 +50,11 @@ public class GPanel extends JFrame {
         resultLabel.setBounds(10, 180, 450, 25);
         panel.add(resultLabel);
 
+        copyButton = new JButton("Copy");
+        copyButton.setBounds(250, 405, 200, 30);
+        copyButton.setEnabled(false);
+        panel.add(copyButton);
+
         JButton generateButton = new JButton("Generate Password");
         generateButton.setBounds(5, 405, 200, 30);
         panel.add(generateButton);
@@ -55,6 +64,21 @@ public class GPanel extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String password = generatePassword();
                 resultLabel.setText(password);
+                copyButton.setEnabled(true);
+            }
+        });
+
+        copyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String password = resultLabel.getText();
+                if (!password.isEmpty() && !password.equals("Here will be your password")) {
+                    StringSelection selection = new StringSelection(password);
+                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                    clipboard.setContents(selection, null);
+
+                    JOptionPane.showMessageDialog(panel, "Password copied to your clipboard!", "Copied", JOptionPane.INFORMATION_MESSAGE);
+                }
             }
         });
 
