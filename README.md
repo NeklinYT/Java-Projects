@@ -7,7 +7,7 @@
 ### Windows 🪟
 Программа поставляется в **portable** версии и не требует установки.
 
-1. Скачайте архив `PasswordGenerator-v1.5.0-win-portable.zip` со [страницы релизов](https://github.com/ваш-логин/PasswordGeneratorGUI/releases).
+1. Скачайте архив `PasswordGenerator-v1.5.0-win-portable.zip` со [страницы релизов](https://github.com/neklinyt/PasswordGeneratorGUI/releases).
 2. Распакуйте архив в любую удобную папку (например, `C:\Program Files\PasswordGenerator` или на рабочий стол).
 3. Запустите файл **`Password generator.exe`**.
 
@@ -27,7 +27,7 @@
 ### Windows 🪟
 The program is provided as a **portable** version, no installation required, you can carry it on a USB stick.
 
-1. Download the archive `PasswordGenerator-v1.5.0-win-portable.zip` from the [releases page](https://github.com/your-username/PasswordGeneratorGUI/releases).
+1. Download the archive `PasswordGenerator-v1.5.0-win-portable.zip` from the [releases page](https://github.com/neklinyt/PasswordGeneratorGUI/releases).
 2. Extract the archive to any convenient folder (e.g., `C:\Program Files\PasswordGenerator` or your desktop).
 3. Run the file **`Password generator.exe`**.
 
